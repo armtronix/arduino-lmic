@@ -1,3 +1,19 @@
+### Semtech SX1276/77/78/79 wiring on Arduino Uno Lora Board v0.1 
+
+| Semtech SX1276/77/78/79 | Arduino Uno/Atmeg328P |
+| :---------------------: | :------:|
+| VCC | 3.3V |
+| GND | GND |
+| SCK | SCK |
+| MISO | MISO |
+| MOSI | MOSI |
+| NSS | 10 |
+| NRESET | A1 |
+| DIO0 | 2 |
+| DIO1 | 3 |
+| DIO2 | 9 |
+
+
 Arduino-LMIC library
 ====================
 This repository contains the IBM LMIC (LoraMAC-in-C) library, slightly
