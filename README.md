@@ -13,6 +13,21 @@
 | DIO1 | 3 |
 | DIO2 | 9 |
 
+### Semtech SX1276/77/78/79 wiring on Arduino Uno Lora Board v0.2
+
+| Semtech SX1276/77/78/79 | Arduino Uno/Atmeg328P |
+| :---------------------: | :------:|
+| VCC | 3.3V |
+| GND | GND |
+| SCK | SCK |
+| MISO | MISO |
+| MOSI | MOSI |
+| NSS | 10 |
+| NRESET | A1 |
+| DIO0 | 2 |
+| DIO1 | 6 |
+| DIO2 | 7 |
+
 
 Arduino-LMIC library
 ====================
@@ -242,14 +257,14 @@ see the notes above for when a pin can or cannot be left out).
 The name of this struct must always be `lmic_pins`, which is a special name
 recognized by the library.
 
-#### LoRa Nexus by Ideetron
+#### LoRa Arduino Board 0.2
 This board uses the following pin mapping:
 
     const lmic_pinmap lmic_pins = {
         .nss = 10,
         .rxtx = LMIC_UNUSED_PIN,
-        .rst = LMIC_UNUSED_PIN, // hardwired to AtMega RESET
-        .dio = {4, 5, 7},
+        .rst = A1, // hardwired to AtMega RESET
+        .dio = {2, 6, 7},
     };
 
 Examples
