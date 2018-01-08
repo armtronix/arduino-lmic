@@ -28,7 +28,20 @@
 | DIO1 | 6 |
 | DIO2 | 7 |
 
+### Semtech SX1276/77/78/79 wiring on Arduino STM32 Lora Board v0.3
 
+| Semtech SX1276/77/78/79 | Arduino STM32F103CB |
+| :---------------------: | :------:|
+| VCC | 3.3V |
+| GND | GND |
+| SCK | SCK |
+| MISO | MISO |
+| MOSI | MOSI |
+| NSS | PA4 |
+| NRESET | PC13 |
+| DIO0 | PA1 |
+| DIO1 | PB13 |
+| DIO2 | PB12 |
 Arduino-LMIC library
 ====================
 This repository contains the IBM LMIC (LoraMAC-in-C) library, slightly
@@ -259,13 +272,25 @@ recognized by the library.
 
 #### LoRa Arduino Board 0.2
 This board uses the following pin mapping:
-
-    const lmic_pinmap lmic_pins = {
+ const lmic_pinmap lmic_pins = {
         .nss = 10,
         .rxtx = LMIC_UNUSED_PIN,
         .rst = A1, // hardwired to AtMega RESET
         .dio = {2, 6, 7},
     };
+
+    
+    
+#### LoRa Arduino Board 0.3 (STM Mocrocontroller)
+This board uses the following pin mapping:
+
+  const lmic_pinmap lmic_pins = {
+    .nss = PA4,
+    .rxtx = LMIC_UNUSED_PIN,
+    .rst = PC13,
+    .dio = {PA1, PB13, PB12},
+};
+   
 
 Examples
 --------
