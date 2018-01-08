@@ -42,6 +42,9 @@
 | DIO0 | PA1 |
 | DIO1 | PB13 |
 | DIO2 | PB12 |
+
+
+
 Arduino-LMIC library
 ====================
 This repository contains the IBM LMIC (LoraMAC-in-C) library, slightly
