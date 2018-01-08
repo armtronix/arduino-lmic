@@ -275,24 +275,25 @@ recognized by the library.
 
 #### LoRa Arduino Board 0.2
 This board uses the following pin mapping:
- const lmic_pinmap lmic_pins = {
+
+      const lmic_pinmap lmic_pins = {
         .nss = 10,
         .rxtx = LMIC_UNUSED_PIN,
         .rst = A1, // hardwired to AtMega RESET
         .dio = {2, 6, 7},
-    };
+         };
 
     
     
 #### LoRa Arduino Board 0.3 (STM Mocrocontroller)
 This board uses the following pin mapping:
 
-  const lmic_pinmap lmic_pins = {
-    .nss = PA4,
-    .rxtx = LMIC_UNUSED_PIN,
-    .rst = PC13,
-    .dio = {PA1, PB13, PB12},
-};
+     const lmic_pinmap lmic_pins = {
+       .nss = PA4,
+        .rxtx = LMIC_UNUSED_PIN,
+        .rst = PC13,
+        .dio = {PA1, PB13, PB12},
+     };
    
 
 Examples
